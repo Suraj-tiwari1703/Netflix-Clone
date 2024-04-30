@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .logo H1 {
+            width: 90px;
+            height: 90px;
+            filter: opacity(1);
+            color: rgb(229, 9, 20);
+            position: relative;
+            bottom: 430px;
+            left: 15px;
+            font-weight: 900;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .blackbox {
+            height: 445px;
+            background-color: rgb(16, 15, 15);
+            filter: opacity(0.9);
+            border-bottom: 5px solid #631c3a;
+            background: -webkit-linear-gradient(115deg, #1f1e1eb6, #000000, #000000);
+
+
+
+        }
+
+        .container {
+            height: 445px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/c906271d-7184-4eec-83c9-b6d4c1a068ec/728874a6-eeda-400a-9bcf-a935a1408a4f/IN-en-20231127-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+        }
+
+        .language-select {
+            text-align: end;
+            position: relative;
+            right: 100px;
+            top: 20px;
+
+        }
+
+
+        .language-select select {
+            background-color: #222222;
+            color: white;
+            height: 25px;
+            width: 100px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+
+
+
+
+        }
+
+        #PseudoOption {
+            display: none;
+            width: 40px;
+        }
+
+        .language-select select:active {
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+        .sign-in-button {
+            text-align: end;
+            position: relative;
+            right: 100px;
+            top: 0px;
+        }
+
+        .sign-in-button button {
+            height: 27px;
+            position: relative;
+            width: 65px;
+            left: 75px;
+            bottom: 5px;
+            background-color: rgb(229, 9, 20);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        #Unlimited {
+            color: aliceblue;
+            font-size: 35px;
+            text-align: start;
+            position: absolute;
+            left: 155px;
+            top: 155px;
+            font-weight: 900;
+            filter: brightness(300%);
+        }
+
+        #Shows {
+            color: aliceblue;
+            font-size: 35px;
+            text-align: start;
+            position: absolute;
+            left: 155px;
+            top: 200px;
+            font-weight: 900;
+            filter: brightness(300%);
+        }
+
+        #Starts {
+            color: aliceblue;
+            font-size: 15px;
+            text-align: start;
+            position: absolute;
+            left: 155px;
+            top: 250px;
+            filter: brightness(300%);
+        }
+
+        #Ready {
+            color: aliceblue;
+            font-size: 15px;
+            text-align: start;
+            position: absolute;
+            left: 155px;
+            top: 310px;
+            filter: brightness(300%);
+        }
+
+        #Email-input {
+            background-color: #222222;
+            color: white;
+            font-size: 15px;
+            text-align: start;
+            position: absolute;
+            height: 40px;
+            width: 270px;
+            left: 155px;
+            top: 370px;
+            filter: brightness(80%);
+            border: none;
+            border-radius: 5px;
+        }
+
+        #Get-started {
+            background-color: rgb(232, 0, 12);
+            color: white;
+            font-weight: 500;
+            font-size: 15px;
+            text-align: center;
+            position: absolute;
+            height: 40px;
+            width: 140px;
+            left: 435px;
+            cursor: pointer;
+            top: 370px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .maincontainer1 {
+            /* height: 600px;
+background-color: #000000; */
+        }
+
+        .mainbox1 {
+            height: 480px;
+            background-color: black;
+        }
+
+        #mainbox1-head {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 525px;
+            left: 65px;
+
+        }
+
+        .mainbox1 ul {
+            display: grid;
+            color: white;
+            grid-template-columns: 430px 430px;
+            grid-template-rows: 100px 100px;
+            font-size: 10px;
+            justify-content: center;
+            row-gap: 60px;
+            column-gap: 10px;
+            position: relative;
+            top: 120px;
+            right: 8px;
+            /* background-color:  #5e1c38;
+    border-radius: 60px; */
+
+
+        }
+
+        .mainbox1 ul li {
+            height: 145px;
+            list-style: none;
+            border: 2px solid #5e1c38;
+            background: -webkit-linear-gradient(bottom, #230e10, #441526, #631d3b);
+            background-color: #5e1c38;
+            border-radius: 15px;
+
+
+        }
+
+        #L1-1 {
+            color: #ffffff;
+            position: relative;
+            top: 30px;
+            left: 15px;
+            font-weight: 9;
+        }
+
+        #L1-2 {
+            color: #c8b9bf;
+            position: relative;
+            top: 40px;
+            left: 15px;
+            font-weight: 9;
+        }
+
+        #L1-3 {
+            color: #ffffff;
+            position: relative;
+            top: 15px;
+            font-weight: 9;
+        }
+
+        #L2-1 {
+            color: #ffffff;
+            position: relative;
+            top: 30px;
+            left: 15px;
+            font-weight: 9;
+
+        }
+
+        #L2-2 {
+            color: #c8b9bf;
+            position: relative;
+            top: 40px;
+            left: 15px;
+            font-size: 13.5px;
+            font-weight: 9;
+        }
+
+        #L2-3 {
+            color: #ffffff;
+            position: relative;
+            top: 50px;
+            left: 15px;
+            font-size: 15px;
+            font-weight: 9;
+        }
+
+        #L3-1 {
+            color: #ffffff;
+            position: relative;
+            top: 30px;
+            font-weight: 9;
+            left: 15px;
+        }
+
+        #L3-2 {
+            color: #c8b9bf;
+            position: relative;
+            top: 40px;
+            font-weight: 9;
+            left: 15px;
+        }
+
+        #L3-3 {
+            color: #ffffff;
+            position: relative;
+            top: 50px;
+            font-weight: 9;
+            font-size: 15px;
+            left: 15px;
+        }
+
+        #L4-1 {
+            color: #ffffff;
+            position: relative;
+            top: 30px;
+            font-weight: 9;
+            left: 15px;
+        }
+
+        #L4-2 {
+            color: #c8b9bf;
+            position: relative;
+            top: 40px;
+            font-weight: 9;
+            left: 15px;
+        }
+
+        #L4-3 {
+            color: #ffffff;
+            font-weight: 9;
+            position: relative;
+            top: 55px;
+            left: 15px;
+            font-size: 15px;
+        }
+
+        .mainbox2 {
+            background-color: black;
+            height: 252px;
+        }
+
+        #mainbox2-head {
+            color: white;
+            position: absolute;
+            left: 60px;
+        }
+
+        #mainbox2btn1 {
+            position: absolute;
+            left: 60px;
+            top: 960px;
+            height: 27px;
+            background-color: #222222;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #mainbox2btn2 {
+            position: absolute;
+            background-color: #222222;
+            color: white;
+            left: 130px;
+            top: 960px;
+            height: 27px;
+            border-radius: 5px;
+        }
+
+        #mainboxbtn1:active {
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+
+        #mainboxbtn2:active {
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+
+        .content {
+            color: white;
+
+        }
+
+        .content ul {
+            color: white;
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+            grid-row: 80px;
+            column-gap: 50px;
+            list-style: none;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            justify-content: space-between;
+            align-content: space-around;
+        }
+
+        .content ul li {
+            text-align: start;
+        }
+
+        .content ul li:hover {
+            transform: scale(1.1);
+            transition: all ease-in 0.2s;
+            cursor: pointer;
+        }
+
+        .maincontent {
+            position: relative;
+            top: 90px;
+            padding-left: 55px;
+        }
+
+        #first-item {
+            border: 2px solid aqua;
+            border: none;
+            border-radius: 5px;
+            height: 150px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABXGwyKrfMacsjeSUol5xBQ2_oRw3CSqkixtPhaVcXa3qtHdDPUn8Eydc3gxFBTEBJMhBY5s-jHOK2zDExx9I32RHA4ftpJTB5E0WtTDtaUm79ENpwF8cmzkw36kk7K5G8yB6rguGJnhtQlIOQ89e5JkW8FWElGX0qiijzJkhm-oO4MjWDpOPiIZRKAstDiNlJmbqYDKi062SRZSXLe3gWF0bAsP12vBePiIO0OHUa7ZY3Vzi2a2v_5PaHEHqbt1tLT_N6hWMPWYZ4v9BS7Ysptphg5_xdbi0oUP-YuqGxvH6Pj3PmKTYxdzjZ0IS2mRQV-2svtUWhPeND5sLKVV1SZ4.webp?r=0d2);
+        }
+
+        #second-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABW9oSflZfsinDuv_XIwcRxvWfzCm2n5n7lOpETNAUTrPUq-Ty3-GO86-LXL-YIpb3RR-hu_fheVRaGy67WbK-2DLNILWe_TM7EMX3wnMWPJveBFS9HjQ3CQPt_WKhrHWw1p177lpxuuDIfeBuTGnV4BKK24XmVtkVfLMCZFuM7ZgIwxASkGVUX0nHg6JsSfgasQsClpqnjvnHHn1hsVtLJJm19Oj7AgHpF_I8NzWlysH4yiJ8iGuwBNq6Nplc0Jpdv-erZK1jqA0DZ_YI3JqOZs1oMpDquLVAqjA6GzXRPqAjBn95tuqffjZxClV4-iTcd60SwEqaPBRugsr9TcVvY4.webp?r=440);
+        }
+
+        #third-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABXGwyKrfMacsjeSUol5xBQ2_oRw3CSqkixtPhaVcXa3qtHdDPUn8Eydc3gxFBTEBJMhBY5s-jHOK2zDExx9I32RHA4ftpJTB5E0WtTDtaUm79ENpwF8cmzkw36kk7K5G8yB6rguGJnhtQlIOQ89e5JkW8FWElGX0qiijzJkhm-oO4MjWDpOPiIZRKAstDiNlJmbqYDKi062SRZSXLe3gWF0bAsP12vBePiIO0OHUa7ZY3Vzi2a2v_5PaHEHqbt1tLT_N6hWMPWYZ4v9BS7Ysptphg5_xdbi0oUP-YuqGxvH6Pj3PmKTYxdzjZ0IS2mRQV-2svtUWhPeND5sLKVV1SZ4.webp?r=0d2);
+        }
+
+        #four-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABXGwyKrfMacsjeSUol5xBQ2_oRw3CSqkixtPhaVcXa3qtHdDPUn8Eydc3gxFBTEBJMhBY5s-jHOK2zDExx9I32RHA4ftpJTB5E0WtTDtaUm79ENpwF8cmzkw36kk7K5G8yB6rguGJnhtQlIOQ89e5JkW8FWElGX0qiijzJkhm-oO4MjWDpOPiIZRKAstDiNlJmbqYDKi062SRZSXLe3gWF0bAsP12vBePiIO0OHUa7ZY3Vzi2a2v_5PaHEHqbt1tLT_N6hWMPWYZ4v9BS7Ysptphg5_xdbi0oUP-YuqGxvH6Pj3PmKTYxdzjZ0IS2mRQV-2svtUWhPeND5sLKVV1SZ4.webp?r=0d2);
+        }
+
+        #five-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABfrg3IARrTiP7I-pOl8AusY6zhJypZbO_7Bj00PwAVclSEoF3fpS3_e3ID3hZAnThVxiRan8toJBw1Pkum-14ys0OCJNDPinaGIXulqnm8btceC04272quWrc-YiJ7sOY9PiE-BQ8DyQuFyFt7pmRrsQsvE9BaVd1Hg.webp?r=896);
+        }
+
+        #six-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABYEzjgj7WEIAkwAJVqaWAVtG-aJ0ecplQR-gFDPg2YC8cV4G-ojnkepwr8Z4VlVls617eyUyie2IvRUer2a6-qxt1LFHcclnsibZfgBiHSA8UnA8nJLJYWIK_3b-Wbi0KwPIg7HSvJe8sHwyeQwjFZgMr_OfIvVFbGOhUgYH-GY3SfKgdojAVK_58w91nIzlSOPQuBjxdq4hn_W9JP6gqbOqP_qPcuPpXo2hVv12EKgRDILibaXH7GCd02nLhYrTw8kUOBuQpCGyQUIaXYDqQFyNQ2vNxmcM7BvB0v7RSy32tOR2QnaQ0Y0q.webp?r=a72);
+        }
+
+        #Seven-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABaV8-jnjMDdTDtKZzvHL1qgMMj96xSsuovZbZg7cnXvPbwvEwzL-4UE0X3Rpy3_Uv-wDDkInpM5ovX66wBkPp_1AZ39EuHiTrekyuyGnJ11SmO2iQcbt7mhOfgv2eZfImfiNlZGB0_AYFLa_aTQzFWVlb0KCCFuMYj_i00TBQn7vyCJaRHtWeJTn9aPsvMb648RFoUs6jn6LbMH_aIVy_JgCOAOKN1Aw8v6D569iIhmcMWv77DnZ_jIP7TPV5C4ZHUMHAxoNTiuVJ6vkR53A1xI4SpH7.webp?r=35c);
+        }
+
+        #eight-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABW3M5NefFmZ8EUg43NyrEZipl2p_-shN8R8dSp2HzAfdatHzgM8m2A_2BMhSUe4NqHXHL5Z0nFMPI4nMhoaFcqygF8yKlsVBG34on_XVOJgFmJ5pJw4_6o9GEPNMjR-wVjMlUsMVi1CIRuGH4fBrB3mIk-FOPQkYiupJzgbA2RM2nFz_5pzhdYfcAROpH7IQgFG-AsaOvN4OED-wjm5VnJtIuoRLtOeIGgnK-qkwm-9jaFsLZOBKqYUAvT4qmI2WcNVtlLajwhLVNipe4_paDIpd3i41.webp?r=683);
+        }
+
+        #nine-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABTeT1E89bs3BhLC_59v1COBxJOv5p9hcOtWcHSNjXsT61vLuqov74eZkDjbQI4XPt96mlkmbPzSk1vuUrbeQBjfA0i1XD6F1EJyhvW0J2cHn8Eef3r8FQKJzfdI_QQzZtLaOKWXj_Nxbi7SoQy3qEaxvFr25cem1H7ZRKxpWE_EYs-yvnK9g2ZN8__tn-4yoH-b5AKwCK8eXpN4YkaQbeFwJY3VJTSbbYFjmYBrlWtQFe47secauWR-LbAkYxyF-3wrsXbYTe0GVs87cVIdMTYlq96OVjE7d1DgZZLCKfs0qL3qqeANzLnhZ.webp?r=aaf);
+        }
+
+        #ten-item {
+            border: 2px solid aqua;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+            width: 108px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(https://occ-0-2873-2186.1.nflxso.net/dnm/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABTlihobZxw84CoA97JEwlG23F3j_j66mzm54HPXRT73qE33Z2WQp7kSMpdQGEpd6qndIMZniyfe0JNsLtY3w8zgW6_PPrbHXqws.webp?r=131);
+        }
+
+        #one {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #two {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #three {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #four {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #five {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #six {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #seven {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #eight {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #nine {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        #ten {
+            color: black;
+            position: relative;
+            top: 100px;
+            font-size: 50px;
+            font-weight: 900;
+            /* text-shadow: 5px 5px 5px white; */
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #ffffff;
+        }
+
+        .mainbox3 {
+            background-color: black;
+            height: 645px;
+        }
+
+        #mainbox3-head {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            left: 55px;
+            top: 1250px;
+            font-weight: 900;
+        }
+
+        .mainbox3-container1 {
+            color: white;
+            position: absolute;
+            top: 1300px;
+            left: 50px;
+            height: 170px;
+            width: 900px;
+            border-radius: 10px;
+            background: -webkit-linear-gradient(right, #000000, #2b1225, #44172b);
+        }
+
+        #mainbox3-img {
+            position: absolute;
+            top: 1302px;
+            /* background-image: url(https://assets.nflxext.com/ffe/siteui/acquisition/nmhp/games-banner-image-cropped.png); */
+            left: 700px;
+            filter: opacity(0.6);
+            border-radius: 10px;
+        }
+
+        #mobile {
+            font-size: 20px;
+            position: relative;
+            top: 60px;
+            left: 20px;
+            font-weight: 900;
+        }
+
+        #ads {
+            font-size: 13px;
+            position: relative;
+            top: 70px;
+            color: #c8b9bf;
+            left: 20px;
+            font-weight: 900;
+        }
+
+        #reasons {
+            color: white;
+            position: absolute;
+            top: 1550px;
+            left: 50px;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .mainbox4 ul {
+            color: white;
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-template-rows: 50px;
+            position: absolute;
+            top: 1700px;
+            left: 50px;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            column-gap: 170px;
+
+        }
+
+        .mainbox4 ul li {
+            border-radius: 10px;
+            width: 210px;
+            height: 190px;
+            background: -webkit-linear-gradient(100deg, #20101d, #1e1529, #1a1f40);
+        }
+
+        .mainbox4 ul li h1 {
+            font-size: 20px;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        #img1 {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            top: 94px;
+            left: 160px;
+            border-radius: 10px;
+        }
+
+        #img2 {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            top: 94px;
+            left: 160px;
+            border-radius: 10px;
+        }
+
+        #img3 {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            border-radius: 10px;
+            top: 117px;
+            left: 160px;
+        }
+
+        #img4 {
+            height: 50px;
+            width: 50px;
+            position: relative;
+            border-radius: 10px;
+            top: 70px;
+            left: 160px;
+        }
+
+        .footbox1 {
+            height: 540px;
+            background-color: black;
+        }
+
+        .footbox1 h2 {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 1880px;
+            left: 50px;
+            font-weight: 900;
+        }
+
+        .footbox1 ul {
+            color: white;
+            position: absolute;
+            top: 1920px;
+            display: grid;
+            grid-template-columns: 50px;
+            grid-template-rows: 50px 50px 50px 50px 50px;
+            left: 50px;
+            column-gap: 0px;
+            row-gap: 25px;
+            font-weight: 900;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .footbox1 ul li {
+            height: 65px;
+            width: 690px;
+            background-color: #2d2d2d;
+
+
+        }
+
+        .footbox1 ul li:hover {
+            background-color: #414141;
+        }
+
+        .footbox1 ul li h1 {
+            position: relative;
+            top: 20px;
+            left: 15px;
+            font-size: 20px;
+        }
+
+        .footbox2 {
+            height: 700px;
+            background-color: black;
+        }
+
+        .footbox2 h3 {
+            color: #c8b9bf;
+            font-size: 12px;
+            position: absolute;
+            top: 2410px;
+            left: 50px;
+            font-weight: 90;
+
+        }
+
+        .footbox2 input {
+            height: 45px;
+            width: 600px;
+            position: absolute;
+            top: 2410px;
+            left: 50px;
+            background-color: #0f0f0f;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        .footbox2 button {
+            height: 45px;
+            width: 140px;
+            position: absolute;
+            top: 2410px;
+            left: 660px;
+            color: white;
+            background-color: #e50914;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .footbox2 button:hover {
+            background-color: #c11119;
+        }
+
+        .footbox2 h2 {
+            color: #c8b9bf;
+            font-size: 12px;
+            position: absolute;
+            top: 2500px;
+            left: 80px;
+            font-weight: 90;
+            text-decoration: none;
+        }
+
+        #call {
+            text-decoration: underline;
+            color: #c8b9bf;
+
+        }
+
+        .footbox2 ul {
+            display: grid;
+            list-style: none;
+            grid-template-columns: 20px 20px 20px;
+            grid-template-rows: 20px 20px 20px 20px 20px;
+            justify-content: start;
+            row-gap: 19px;
+            column-gap: 250px;
+            position: absolute;
+            top: 2550px;
+            left: 80px;
+            width: 800px;
+        }
+
+        .footbox2 ul li {
+            font-size: 12px;
+            width: 150px;
+
+        }
+
+        #Account {
+            position: absolute;
+            /* top: 2550px;
+    left: 80px; */
+        }
+
+        .footbox2 ul li a {
+            color: #c8b9bf;
+        }
+
+        #language-select2 {
+            background-color: #0f0f0f;
+            color: white;
+            height: 30px;
+            width: 100px;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            position: absolute;
+            top: 2780px;
+            left: 80px;
+
+
+
+        }
+
+        #PseudoOption2 {
+            display: none;
+            width: 40px;
+        }
+
+        #language-select2 select:active {
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+        .footbox2 h4 {
+            color: #c8b9bf;
+            position: absolute;
+            top: 2880px;
+            font-size: 12px;
+            font-weight: 130;
+            left: 80px;
+
+        }
+
+        .top button {
+            color: white;
+            position: absolute;
+            top: 2880px;
+            background-color: #c11119;
+            height: 60px;
+            left: 890px;
+            width: 70px;
+            border: none;
+            cursor: pointer;
+            border-radius: 1000px;
+            box-shadow: 2px 2px 2px #c11119;
+            animation: TOPBUTTON 2s ease-in-out 2s infinite;
+
+        }
+
+        @keyframes TOPBUTTON {
+            from {
+                background-color: #c11119;
+                transform: scale(1.1);
+                color: white;
+                transform: skew(10);
+                box-shadow: 0px 1px 18px 0px #fdfdfd;
+
+            }
+
+            to {
+                transform: scale(1.2);
+                color: black;
+                box-shadow: 0px 1px 20px maroon;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="blackbox">
+                <div class="language-select">
+                    <select name="lang" id="lang">
+                        <label for="asdsd"></label>
+                        <option value="English" id="PseudoOption"> 文 &nbsp; English </option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                    </select>
+                    <article>
+                        <h1 id="Unlimited">Unlimited movies, TV</h1>
+                        <h1 id="Shows">shows and more</h1>
+                        <span id="Starts">Starts at ₹149. Cancel anytime</span>
+                        <p id="Ready">Ready to watch? Enter your email to create or restart your membership.</p>
+                        <input type="email" placeholder="Email address" id="Email-input"></input>
+                        <button id="Get-started">Get Started &nbsp;&nbsp;></button>
+                    </article>
+                </div>
+                <div class="sign-in-button">
+                    <button>Sign In</button>
+                </div>
+            </div>
+            <nav>
+                <div class="logo">
+                    <H1 id="mainlogo">NETFLIX</H1>
+            </nav>
+    </header>
+    <div class="maincontainer">
+        <div class="mainbox1">
+            <h2 id="mainbox1-head">A plan to suit your needs</h2>
+            <ul>
+                <li>
+                    <h2 id="L1-1">MOBILE</h2>
+                    <h2 id="L1-2">A travel-friendly for your mobile devices.<br>
+                        <span id="L1-3">₹149/month</span>
+                </li>
+                <li>
+                    <h2 id="L2-1">BASIC</h1>
+                        <h2 id="L2-2">A great way to enjoy all your favourite shows and movies on a budget</h2>
+                        <span id="L2-3">₹199/month</span>
+                </li>
+                <li>
+                    <h2 id="L3-1">STANDARD</h1>
+                        <h2 id="L3-2">All the entertainment you love, in Full HD video quality.</h2>
+                        <span id="L3-3">₹449/month</span>
+                </li>
+                <li>
+                    <h2 id="L4-1">PREMIUM</h1>
+                        <h2 id="L4-2">A cinematic experience with the best picture and audio quality.</h2>
+                        <span id="L4-3">₹649/month</span>
+                </li>
+            </ul>
+
+        </div>
+        <div class="mainbox2">
+            <h2 id="mainbox2-head">Trending Now</h2>
+            <select id="mainbox2btn1">
+                <option value="India">India</option>
+                <option value="Global">Global</option>
+            </select>
+            <select id="mainbox2btn2">
+                <option value="Movies">Movies</option>
+                <option value="TV">TV Shows</option>
+            </select>
+            <div class="maincontent">
+                <div class="content">
+                    <ul>
+                        <li id="first-item">
+                            <h1 id="one">1</h1>
+                        </li>
+                        <li id="second-item">
+                            <h1 id="two">2</h1>
+                        </li>
+                        <li id="third-item">
+                            <h1 id="three">3</h1>
+                        </li>
+                        <li id="four-item">
+                            <h1 id="four">4</h1>
+                        </li>
+                        <li id="five-item">
+                            <h1 id="five">5</h1>
+                        </li>
+                        <li id="six-item">
+                            <h1 id="six">6</h1>
+                        </li>
+                        <li id="Seven-item">
+                            <h1 id="seven">7</h1>
+                        </li>
+                        <li id="eight-item">
+                            <h1 id="eight">8</h1>
+                        </li>
+                        <li id="nine-item">
+                            <h1 id="nine">9</h1>
+                        </li>
+                        <li id="ten-item">
+                            <h1 id="ten">10</h1>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mainbox3">
+            <h2 id="mainbox3-head">
+                Play Mobile Games
+            </h2>
+            <div class="mainbox3-container1">
+                <h2 id="mobile">Mobile games now included in every plan</h2>
+                <p id="ads">No ads, extra fees, or in-app purchases. Enjoy unlimited access to a <br> growing catalogue
+                    of
+                    popular and exclusive games.</p>
+            </div>
+            <img  src="games-banner-image-cropped.png" height="170px" width="250px" alt="" id="mainbox3-img">
+            <div class="mainbox4">
+                <h1 id="reasons">More reasons to join</h1>
+                <ul>
+                    <li>
+                        <h1>Stories tailored to<br> your taste</h1>
+                        <img src="container3(1).png" id="img1" alt="">
+                    </li>
+                    <li>
+                        <h1>Cancel or switch <br> plans anytime</h1>
+                        <img src="container3(2).png" id="img2" alt="">
+                    </li>
+                    <li>
+                        <h1>A place just for kids</h1>
+                        <img src="container3(3).png" id="img3" alt="">
+                    </li>
+                    <li>
+                        <h1>For your phone,<br>
+                            tablet,laptop,and<br>
+                            TV</h1>
+                        <img src="container3(4).png" id="img4" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+        <div class="footbox1">
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+                <li>
+                    <h1>What is Netflix?</h1>
+                </li>
+                <li>
+                    <h1>How much does Netflix cost?</h1>
+                </li>
+                <li>
+                    <h1>Where can I watch?</h1>
+                </li>
+                <li>
+                    <h1>How do I cancel?</h1>
+                </li>
+                <li>
+                    <h1>What can I watch on Netflix?</h1>
+                </li>
+                <li>
+                    <h1>Is Netflix good for kids?</h1>
+                </li>
+            </ul>
+        </div>
+        <div class="footbox2">
+            <h3>Ready to watch? Enter your email to create or restart your membership.
+            </h3>
+            <input type="email" placeholder="Email address">
+            <button>Get Started &nbsp;&nbsp;></button>
+            <h2>Questions? Call&nbsp;<a href="#" id="call" </a> 000-800-919-1694</h2>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#"> Help Centre</a></li>
+                <li id="Account"><a href="#">Account</a></li>
+                <li><a href="#">Media Centre</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li id="Jobs"><a href="#">Jobs</a></li>
+                <li><a href="#">Ways to watch</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li id="Privacy"><a href="#">Privacy</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Corporate Information</a></li>
+                <li id="Contact-us"><a href="#">Contact Us</a></li>
+                <li><a href="#">Speed Test</a></li>
+                <li><a href="#">Legal Notices</a></li>
+                <li id="Only"><a href="#">Only on Netflix</a></li>
+            </ul>
+            <select id="language-select2">
+                <option value="English" id="PseudoOption2"> 文 &nbsp; English </option>
+                <option value="English">English</option>
+                <option value="Hindi">हिंदी </option>
+            </select>
+            <h4>Netflix India</h4>
+
+        </div>
+        <div class="top">
+            <a href="#"> <button id="top-1">TOP ↑ </button></a>
+        </div>
+    </footer>
+</body>
+
+</html>
